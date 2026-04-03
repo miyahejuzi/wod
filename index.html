@@ -1,80 +1,71 @@
 <DOCTYPE html> 
 <html lang="zh-CN"> 
 <head> 
-<meta charset="utf-8"> 
-<meta name="viewport" content="width=device-width, initial-scale=1"> 
-<style> 
-*{box-sizing:border-box;font-family:Microsoft YaHei,sans-serif;}body{background:#f5f7fa;padding:20px;max-width:1000px;margin:0 auto;}.group{background:white;border-radius:12px;margin-bottom:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);overflow:hidden;}.group-title{padding:14px 18px;background:#3b82f6;color:white;font-size:16px;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}.group-title:hover{background:#2563eb;}.item{padding:12px 18px;border-top:1px solid #f1f5f9;display:flex;justify-content:space-between;align-items:center;}.item a{color:#1e293b;text-decoration:none;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:70hover{background:#f8fafc;}.time{color:#64748b;font-size:14px;}.empty{text-align:center;padding:40px;color:#94a3b8;} 
-</style> 
-<script>function toggleGroup(g){let items=document.querySelectorAll('.group-'+g);items.forEach(i==i.style.display=='none'?'flex':'none');} </script> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>文件目录索引</title> 
+    <style> 
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: #f5f5f5; color: #333; margin: 0; padding: 20px; } 
+        .container { max-width: 1000px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); } 
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; margin-top: 0; } 
+        .group { margin-bottom: 25px; } 
+        .group-title { font-size: 18px; font-weight: 600; color: #3498db; margin: 15px 0 10px; cursor: pointer; user-select: none; padding: 8px 12px; background: #f8f9fa; border-radius: 6px; } 
+        .group-title:hover { color: #2980b9; background: #e9ecef; } 
+        .folder-list { list-style: none; padding: 0; margin: 0 0 0 10px; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; } 
+        .folder-item { background: #ecf0f1; padding: 12px 15px; border-radius: 6px; transition: transform 0.2s, box-shadow 0.2s; } 
+        .folder-item:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.1); } 
+        .folder-item a { text-decoration: none; color: #2c3e50; font-weight: 500; display: flex; align-items: center; } 
+        .folder-item a::before { content: "\1F4C1"; margin-right: 10px; font-size: 18px; } 
+        .date { font-size: 12px; color: #7f8c8d; margin-left: auto; } 
+        .no-group { color: #95a5a6; font-style: italic; } 
+    </style> 
 </head> 
 <body> 
-<div class="group"> 
-<div class="group-title" onclick="toggleGroup(1)">未分组 <span>▼</span></div> 
-<div class="item group-1"> 
-<a href="C:\Users\Administrator\Downloads\wod战报\wod\wodlog_[琉金夢遊録]�?2.58级」矮人阶�?02603131414/index.html" target="_blank" title="wodlog_[琉金夢遊録]�?2.58级」矮人阶梯">wodlog_[琉金夢遊録]�?2.58级」矮人阶梯</a> 
-<span class="time">  </span> 
-</div> 
-<div class="item group-1"> 
-<a href="C:\Users\Administrator\Downloads\wod战报\wod\wodlog_[打满战败CG的爬爬蛆团]�?2.50级」琥珀的秘�?02603160001/index.html" target="_blank" title="wodlog_[打满战败CG的爬爬蛆团]�?2.50级」琥珀的秘密">wodlog_[打满战败CG的爬爬蛆团]�?2.50级」琥珀的秘密</a> 
-<span class="time">  </span> 
-</div> 
-<div class="item group-1"> 
-<a href="C:\Users\Administrator\Downloads\wod战报\wod\wodlog_[打满战败CG的爬爬蛆团]�?2.58级」凛冬将�?02603160002/index.html" target="_blank" title="wodlog_[打满战败CG的爬爬蛆团]�?2.58级」凛冬将至">wodlog_[打满战败CG的爬爬蛆团]�?2.58级」凛冬将至</a> 
-<span class="time">  </span> 
-</div> 
-<div class="item group-1"> 
-<a href="C:\Users\Administrator\Downloads\wod战报\wod\wodlog_[打满战败CG的爬爬蛆团]�?2.83级」英雄的坟墓202603180003/index.html" target="_blank" title="wodlog_[打满战败CG的爬爬蛆团]�?2.83级」英雄的坟墓">wodlog_[打满战败CG的爬爬蛆团]�?2.83级」英雄的坟墓</a> 
-<span class="time">  </span> 
-</div> 
-<div class="item group-1"> 
-<a href="C:\Users\Administrator\Downloads\wod战报\wod\wodlog_[第一碗大米饭]�?5.75级」危机中的村�?02603210328/index.html" target="_blank" title="wodlog_[第一碗大米饭]�?5.75级」危机中的村庄">wodlog_[第一碗大米饭]�?5.75级」危机中的村庄</a> 
-<span class="time">  </span> 
-</div> 
-<div class="item group-1"> 
-<a href="C:\Users\Administrator\Downloads\wod战报\wod\wodlog_[第一碗大米饭]�?5.75级」潜水II202603211725/index.html" target="_blank" title="wodlog_[第一碗大米饭]�?5.75级」潜水II">wodlog_[第一碗大米饭]�?5.75级」潜水II</a> 
-<span class="time">  </span> 
-</div> 
-<div class="item group-1"> 
-<a href="C:\Users\Administrator\Downloads\wod战报\wod\wodlog_[打满战败CG的爬爬蛆团]�?3.33级」竞技比赛的前�?02603230004/index.html" target="_blank" title="wodlog_[打满战败CG的爬爬蛆团]�?3.33级」竞技比赛的前夜">wodlog_[打满战败CG的爬爬蛆团]�?3.33级」竞技比赛的前夜</a> 
-<span class="time">  </span> 
-</div> 
-<div class="item group-1"> 
-<a href="C:\Users\Administrator\Downloads\wod战报\wod\wodlog_[第一碗大米饭]�?5.75级」海底前�?02603240056/index.html" target="_blank" title="wodlog_[第一碗大米饭]�?5.75级」海底前行">wodlog_[第一碗大米饭]�?5.75级」海底前行</a> 
-<span class="time">  </span> 
-</div> 
-<div class="item group-1"> 
-<a href="C:\Users\Administrator\Downloads\wod战报\wod\wodlog_[第一碗大米饭]�?6.08级」章鱼狩�?02603260922/index.html" target="_blank" title="wodlog_[第一碗大米饭]�?6.08级」章鱼狩猎">wodlog_[第一碗大米饭]�?6.08级」章鱼狩猎</a> 
-<span class="time">  </span> 
-</div> 
-<div class="item group-1"> 
-<a href="C:\Users\Administrator\Downloads\wod战报\wod\wodlog_[打满战败CG的爬爬蛆团]�?4.00级」彩虹尽�?02603311513/index.html" target="_blank" title="wodlog_[打满战败CG的爬爬蛆团]�?4.00级」彩虹尽头">wodlog_[打满战败CG的爬爬蛆团]�?4.00级」彩虹尽头</a> 
-<span class="time">  </span> 
-</div> 
-<div class="item group-1"> 
-<a href="C:\Users\Administrator\Downloads\wod战报\wod\wodlog_[打满战败CG的爬爬蛆团]�?4.00级」第一道门202603312209/index.html" target="_blank" title="wodlog_[打满战败CG的爬爬蛆团]�?4.00级」第一道门">wodlog_[打满战败CG的爬爬蛆团]�?4.00级」第一道门</a> 
-<span class="time">  </span> 
-</div> 
-<div class="item group-1"> 
-<a href="C:\Users\Administrator\Downloads\wod战报\wod\wodlog_[第一碗大米饭]�?7.33级」棕�?02604010436/index.html" target="_blank" title="wodlog_[第一碗大米饭]�?7.33级」棕门">wodlog_[第一碗大米饭]�?7.33级」棕门</a> 
-<span class="time">  </span> 
-</div> 
-<div class="item group-1"> 
-<a href="C:\Users\Administrator\Downloads\wod战报\wod\wodlog_[第一碗大米饭]�?7.42级」绿�?02604011145/index.html" target="_blank" title="wodlog_[第一碗大米饭]�?7.42级」绿门">wodlog_[第一碗大米饭]�?7.42级」绿门</a> 
-<span class="time">  </span> 
-</div> 
-<div class="item group-1"> 
-<a href="C:\Users\Administrator\Downloads\wod战报\wod\wodlog_[打满战败CG的爬爬蛆团]�?4.00级」亡灵巫师塔博塔博的回归202604011151/index.html" target="_blank" title="wodlog_[打满战败CG的爬爬蛆团]�?4.00级」亡灵巫师塔博塔博的回归">wodlog_[打满战败CG的爬爬蛆团]�?4.00级」亡灵巫师塔博塔博的回归</a> 
-<span class="time">  </span> 
-</div> 
-<div class="item group-1"> 
-<a href="C:\Users\Administrator\Downloads\wod战报\wod\wodlog_[打满战败CG的爬爬蛆团]�?4.00级」危机中的村�?02604020155/index.html" target="_blank" title="wodlog_[打满战败CG的爬爬蛆团]�?4.00级」危机中的村庄">wodlog_[打满战败CG的爬爬蛆团]�?4.00级」危机中的村庄</a> 
-<span class="time">  </span> 
-</div> 
-<div class="item group-1"> 
-<a href="C:\Users\Administrator\Downloads\wod战报\wod\wodlog_[打满战败CG的爬爬蛆团]�?4.00级」潜水II202604020951/index.html" target="_blank" title="wodlog_[打满战败CG的爬爬蛆团]�?4.00级」潜水II">wodlog_[打满战败CG的爬爬蛆团]�?4.00级」潜水II</a> 
-<span class="time">  </span> 
-</div> 
-</div> 
+    <div class="container"> 
+        <h1>📁 文件目录索引</h1> 
+    <div class="group"> 
+        <div class="group-title" onclick="toggleGroup(this)">📂 打满战败CG的爬爬蛆团 ▶</div> 
+        <ul class="folder-list" style="display: none;"> 
+        <li class="folder-item"><a href="wodlog_[打满战败CG的爬爬蛆团]「12.50级」琥珀的秘密202603160001/index.html">「12.50级」琥珀的秘密202603160001<span class="date"> </span></a></li> 
+        <li class="folder-item"><a href="wodlog_[打满战败CG的爬爬蛆团]「12.58级」凛冬将至202603160002/index.html">「12.58级」凛冬将至202603160002<span class="date"> </span></a></li> 
+        <li class="folder-item"><a href="wodlog_[打满战败CG的爬爬蛆团]「12.83级」英雄的坟墓202603180003/index.html">「12.83级」英雄的坟墓202603180003<span class="date"> </span></a></li> 
+        <li class="folder-item"><a href="wodlog_[打满战败CG的爬爬蛆团]「13.33级」竞技比赛的前夜202603230004/index.html">「13.33级」竞技比赛的前夜202603230004<span class="date"> </span></a></li> 
+        <li class="folder-item"><a href="wodlog_[打满战败CG的爬爬蛆团]「14.00级」亡灵巫师塔博塔博的回归202604011151/index.html">「14.00级」亡灵巫师塔博塔博的回归202604011151<span class="date"> </span></a></li> 
+        <li class="folder-item"><a href="wodlog_[打满战败CG的爬爬蛆团]「14.00级」危机中的村庄202604020155/index.html">「14.00级」危机中的村庄202604020155<span class="date"> </span></a></li> 
+        <li class="folder-item"><a href="wodlog_[打满战败CG的爬爬蛆团]「14.00级」彩虹尽头202603311513/index.html">「14.00级」彩虹尽头202603311513<span class="date"> </span></a></li> 
+        <li class="folder-item"><a href="wodlog_[打满战败CG的爬爬蛆团]「14.00级」潜水II202604020951/index.html">「14.00级」潜水II202604020951<span class="date"> </span></a></li> 
+        <li class="folder-item"><a href="wodlog_[打满战败CG的爬爬蛆团]「14.00级」第一道门202603312209/index.html">「14.00级」第一道门202603312209<span class="date"> </span></a></li> 
+        </ul> 
+    </div> 
+    <div class="group"> 
+        <div class="group-title" onclick="toggleGroup(this)">📂 琉金夢遊録 ▶</div> 
+        <ul class="folder-list" style="display: none;"> 
+        <li class="folder-item"><a href="wodlog_[琉金夢遊録]「12.58级」矮人阶梯202603131414/index.html">「12.58级」矮人阶梯202603131414<span class="date"> </span></a></li> 
+        </ul> 
+    </div> 
+    <div class="group"> 
+        <div class="group-title" onclick="toggleGroup(this)">📂 第一碗大米饭 ▶</div> 
+        <ul class="folder-list" style="display: none;"> 
+        <li class="folder-item"><a href="wodlog_[第一碗大米饭]「15.75级」危机中的村庄202603210328/index.html">「15.75级」危机中的村庄202603210328<span class="date"> </span></a></li> 
+        <li class="folder-item"><a href="wodlog_[第一碗大米饭]「15.75级」海底前行202603240056/index.html">「15.75级」海底前行202603240056<span class="date"> </span></a></li> 
+        <li class="folder-item"><a href="wodlog_[第一碗大米饭]「15.75级」潜水II202603211725/index.html">「15.75级」潜水II202603211725<span class="date"> </span></a></li> 
+        <li class="folder-item"><a href="wodlog_[第一碗大米饭]「16.08级」章鱼狩猎202603260922/index.html">「16.08级」章鱼狩猎202603260922<span class="date"> </span></a></li> 
+        <li class="folder-item"><a href="wodlog_[第一碗大米饭]「17.33级」棕门202604010436/index.html">「17.33级」棕门202604010436<span class="date"> </span></a></li> 
+        <li class="folder-item"><a href="wodlog_[第一碗大米饭]「17.42级」绿门202604011145/index.html">「17.42级」绿门202604011145<span class="date"> </span></a></li> 
+        </ul> 
+    </div> 
+    </div> 
+    <script> 
+        function toggleGroup(el) { 
+            const ul = el.nextElementSibling; 
+            if (ul.style.display === 'none') { 
+                ul.style.display = 'grid'; 
+                el.innerHTML = el.innerHTML.replace('▶', '▼'); 
+            } else { 
+                ul.style.display = 'none'; 
+                el.innerHTML = el.innerHTML.replace('▼', '▶'); 
+            } 
+        } 
+    </script> 
 </body> 
 </html> 
